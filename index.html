@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FEWD Pizza Online</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <script src="js/pizza.js"></script>
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>
+    	.jumbotron {
+    		margin-top:30px;
+    		background:url('img/bg.png') 0 700px;
+    		box-shadow:0 5px 5px silver;
+    	}
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<!--  <div class="container-fluid">-->
+     <div class="container">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+<!--      <a href="solutions.html"><img src="img/logo.png" alt="" height="50"></a>-->
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="aboutus.html" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="history.html">Company History</a></li>
+            <li><a href="management.html">Management</a></li>
+            <li><a href="career.html">Career</a></li>
+          </ul>
+        </li>        
+         <li class="dropdown">
+          <a href="products.html" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="handTossed.html">Hand Tossed</a></li>
+            <li><a href="thinCrust.html">Thin Crust</a></li>
+            <li><a href="newYorkStyle.html">New York Style</a></li>
+            <li><a href="glutenFree.html">Gluten Free</a></li>   
+          </ul>
+        </li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>
+
+<div class="container">
+    <header class="jumbotron">
+            <h1>FEWD Pizza Online</h1>
+            <p>Scratch-built from award-winning HTML doughs, CSS sauces, and JavaScript toppings!</p>
+            <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+    </header>
+</div>
+		
+<main class="container">	
+	<section class="row">
+		<section class="col-md-12">
+
+			<h2>Pizza Order Form</h2>
+	        <br>
+	        	
+        <form action="" method="post" target="_blank">
+               <fieldset><legend>Delivery Location</legend>
+                <div class="form-group">
+                    Name (required):
+<!--                    <input type="text" name="name" maxlength="30" required>-->
+               <input type="text" id="deliveryName" name="name" maxlength="30">
+                </div>
+                <div class="form-group">
+                    Address Type (required):
+                    <select id="addressType">
+                        <option value="House">House</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Business">Business</option>
+                        <option value="Campus">Campus</option>
+                        <option value="Hotel">Hotel</option>
+                        <option value="Dorm">Dorm</option>          
+                        <option value="other">Other</option>
+                    </select>
+               </div>
+                <div class="form-group">
+                    Street Adress (required):
+                   <div id="standardAddressSection" style="display: block;">
+                    <input type="text" id="deliveryAddress" name="deliveryAddress" maxlength="50" >
+                     Unit Number (optional):
+                    <input type="text" id="deliveryUnitNumber" name="deliveryUnitNumber" maxlength="10">
+                    </div>
+
+                    <div id="otherAddressSection" style="display: none;">
+                    <input type="text" id="deliveryOtherAddress" name="deliveryOtherAddress" maxlength="50" >
+                    </div>
+               </div>
+
+                 <div class="form-group">
+                    City (required):
+                    <input type="text" id="deliveryCity" name="city" maxlength="30" >
+                    State (required):
+                    <input type="text" id="deliveryState" name="state" maxlength="30" >
+                </div>
+                <div class="form-group">                
+                    Zip Code (required):
+                    <input type="text" id="deliveryZipCode" name="zipCode" maxlength="30"  pattern="\d{5}(-\d{4})?">
+                </div>
+                 <div class="form-group">                
+                    Phone Number (required):
+                    <input type="tel" name="phonenumber" maxlength="15" title="Ex: 555-555-5555"  pattern="\d{3}[\-]\d{3}[\-]\d{4}">            
+                    Email (required):
+                    <input type="email" name="email" maxlength="30" title="Ex: sample@sample.com" > 
+                </div>
+            </fieldset>
+            <br>
+            <fieldset><legend>Build Your Order</legend>
+                <div class="form-group">                
+                    Dough Options: 
+                    <label><input type="radio" name="dough" value="handTossed">Hand Tossed</label>
+                    <label><input type="radio" name="dough" value="thinCrust">Thin Crust</label>
+                    <label><input type="radio" name="dough" value="newYorkStyle">New York Style</label>
+                    <label><input type="radio" name="dough" value="glutenFree">Gluten Free</label>
+                </div>
+                <div class="form-group">                
+                    Cheese Options: 
+                    <select id="cheeseOptions">
+                        <option value="light">Light: no charge</option>
+                        <option value="normal">Normal (default): no charge</option>
+                        <option value="extra">Extra: +$2.99</option>
+                        <option value="double">Double: +$3.99</option>
+                    </select>
+                </div> 
+
+                <div class="form-group">  
+                    Sauce Options:
+                    <select id="sauceOptions">
+                        <option value="item 1">Regular Tomato: no charge</option>
+                        <option value="item 2">Hearty Tomato: +$.99</option>
+                        <option value="item 3">BBQ Sauce: +$1.99</option>
+                    </select>
+                </div>
+                <div class="form-group">       
+                    Toppings Options (Each topping is $.99 extra): <br>
+                    <label><input type="checkbox" name="topping" value="pepperoni">pepperoni</label>
+                    <label><input type="checkbox" name="topping" value="sausage">sausage</label>
+                    <label><input type="checkbox" name="topping" value="ham">ham</label>
+                    <label><input type="checkbox" name="topping" value="bacon">bacon</label>
+                    <label><input type="checkbox" name="topping" value="salami">salami</label>
+                    <label><input type="checkbox" name="topping" value="peppers">peppers</label>
+                    <label><input type="checkbox" name="topping" value="olives">olives</label>
+                    <label><input type="checkbox" name="topping" value="jalapenos">jalapenos</label>
+                    <label><input type="checkbox" name="topping" value="mushrooms">mushrooms</label>
+                    <label><input type="checkbox" name="topping" value="pineapple">pineapple</label>
+                    <label><input type="checkbox" name="topping" value="onion">onion</label>
+                </div>
+<!--                 <button id="btnPizzaBuilt">Finished Building Pizza</button>-->
+                <input type ="button" id="btnPizzaBuilt" value="Finished Building Pizza">
+            </fieldset>
+            <br>
+            
+           <div id="billingSection" style="display: none;">
+            <fieldset><legend>Billing Information:</legend>               
+                <div class="form-group">      
+                   Billing information: <br>
+                    <input id="sameAsDelivery" type="checkbox">Same as delivery information</input>
+<!--                    <label><input type="checkbox" name="billingInfo" value="sameAs">Same as delivery information</label>-->
+                </div>
+                <div class="form-group">
+                    Name (required):
+                    <input type="text" id="billingName" name="billingName" maxlength="30" >
+                </div>                
+              <div class="form-group">
+                    Street Adress (required):
+                   <div id="billingStandardAddressSection" style="display: block;">
+                    <input type="text" id="billingAddress" name="billingAddress" maxlength="50" >
+                     Unit Number (optional):
+                    <input type="text" id="billingUnitNumber" name="billingUnitNumber" maxlength="10">
+                    </div>
+
+                    <div id="billingOtherAddressSection" style="display: none;">
+                    <input type="text" id="billingOtherAddress" name="billingOtherAddress" maxlength="50" >
+                    </div>
+               </div>
+
+                 <div class="form-group">
+                    City (required):
+                    <input type="text" id="billingCity" name="billingCity" maxlength="30" >
+                    State (required):
+                    <input type="text" id="billingState" name="billingState" maxlength="30" >
+                </div>
+                 <div class="form-group">                
+                Zip Code (required):
+                <input type="text" id="billingZipCode" name="billingZipCode" maxlength="30" >
+                </div>
+                <br>
+                <div class="form-group">               
+                    Credit Card Number (required):
+                    <input type="text" name="creditCardNumber" maxlength="30">
+                    CVC Code (required):
+                    <input type="text" name="CVCCode" maxlength="30">
+                </div>
+                <div class="form-group">
+                    Expiration date:<br>
+                    Month:
+                        <select id="expirationMonth">
+                            <option value="january">January</option>
+                            <option value="february">February</option>
+                            <option value="march">March</option>
+                            <option value="april">April</option>
+                            <option value="may">May</option>
+                            <option value="june">June</option>          
+                            <option value="july">July</option>
+                            <option value="august">August</option>
+                            <option value="september">September</option>
+                            <option value="october">October</option>
+                            <option value="november">November</option>
+                            <option value="december">December</option>
+                      </select>               
+                    Year:
+                        <select id="expirationYear">
+                            <option value="item 1">2015</option>
+                            <option value="item 2">2016</option>
+                            <option value="item 3">2017</option>
+                            <option value="item 4">2018</option>
+                            <option value="item 5">2019</option>
+                            <option value="item 6">2020</option>          
+                            <option value="item 7">2021</option>
+                            <option value="item 8">2022</option>
+                            <option value="item 9">2023</option>
+                            <option value="item 10">2024</option>
+                      </select>
+                </div>                          
+            </fieldset>
+            </div>   
+                <input type="submit" value="Submit Now">
+
+        </form>
+		</section>
+    </section>
+
+	<footer class="row">
+		<hr>
+		<p>Copyright &copy; 2015 - All rights reserved.</p>
+	</footer>
+</main>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
